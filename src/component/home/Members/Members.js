@@ -16,7 +16,7 @@ class Members extends Component {
    }
 
    render() {
-      let { Judul } = "Members"
+      let Judul = "Members"
       return (
          <Fragment>
             <HeadSectionSeeAll Judul={Judul} />
