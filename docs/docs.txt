@@ -1,0 +1,6 @@
+https://youtu.be/Mus_vwhTCq0
+https://blog.tylerbuchea.com/react-proptypes/
+https://youtu.be/Mus_vwhTCq0 tips & trick ES6
+https://stackoverflow.com/questions/48863490/dynamically-rendering-component-from-string-reactjs
+https://stackoverflow.com/questions/48407785/react-pass-function-to-child-component
+https://stackoverflow.com/questions/38689648/react-how-to-pass-state-to-another-component

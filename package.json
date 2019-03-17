@@ -1,0 +1,45 @@
+{
+  "name": "qtemu",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-helmet": "^5.2.0",
+    "react-html-parser": "^2.0.2",
+    "react-scripts": "2.1.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hlmifzi/QTemu.git"
+  },
+  "keywords": [
+    "Belajar",
+    "React",
+    "Pemula"
+  ],
+  "author": "Helmi Fauzi : HLMIFZI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hlmifzi/QTemu/issues"
+  },
+  "homepage": "https://github.com/hlmifzi/QTemu#readme"
+}
