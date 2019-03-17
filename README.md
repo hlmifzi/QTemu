@@ -13,7 +13,7 @@ materi
 6. proptypes (v)
 7. react helmet (v)
 8. Dynamically rendering component from string: (v)
-9, simple component with const && Lopping component with array (v)
+9. simple component with const && Lopping component with array (v)
 10. many type magic destructering (v)
 11. string to jsx (v)
 12. atomic module (v)
