@@ -18,6 +18,11 @@ class Header extends Component {
          Location,
          Members,
          Organizer } = this.state
+
+      let orang = []
+      this.props.orang.forEach(function(element) {
+         orang.push(element.name)
+     });
       return (
          <Fragment>
             <UiBlockHeader>
@@ -27,7 +32,9 @@ class Header extends Component {
                   Location={Location}
                   Members={Members}
                   Organizer={Organizer}
-                  ChangeMenu={this.props.ChangeMenu} />
+                  ChangeMenu={this.props.ChangeMenu} 
+                  orang={orang}
+                  />
             </UiBlockHeader>
          </Fragment >
       )

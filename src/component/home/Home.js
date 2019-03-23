@@ -12,30 +12,36 @@ import AboutMeetUp from './../home/AboutMeetUp/AboutMeetUp';
 
 class Home extends Component {
    render() {
-      let { ChangeMenu } = this.props
+      let { ChangeMenu, orang } = this.props
+
       let GetWkfContents = [
          {
             nama: Header,
-            props1: ChangeMenu
+            props1: ChangeMenu,
+            orang: orang
          },
          {
             nama: NextMeetUp,
-            props1: ""
+            props1: "",
+            orang: orang
          },
          {
             nama: AboutMeetUp,
-            props1: ""
+            props1: "",
+            orang: ""
          },
          {
             nama: Members,
-            props1: ""
+            props1: "",
+            orang: orang
          },
          {
             nama: PastMeetUp,
-            props1: ""
+            props1: "",
+            orang: ""
          }];
 
-      let Content = GetWkfContents.map((Content, K) => (<Content.nama key={K} ChangeMenu={Content.props1} />))
+      let Content = GetWkfContents.map((Content, K) => (<Content.nama key={K} ChangeMenu={Content.props1} orang={orang} />))
 
       return (
          <Fragment>

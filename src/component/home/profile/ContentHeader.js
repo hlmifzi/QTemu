@@ -22,7 +22,11 @@ class ContentHeader extends React.Component {
 
 
    render() {
-      let { imgUrl, Judul, Location, Members, Organizer } = this.props
+      let { imgUrl, Judul, Location, Members,orang } = this.props
+     
+     
+      
+
       return (
          <Fragment>
             <div className="four wide column">
@@ -32,7 +36,7 @@ class ContentHeader extends React.Component {
                <h1>{Judul}</h1>
                <p>Location    : {Location}</p>
                <p>Members     : {Members}</p>
-               <p>Organizer   : {Organizer}</p>
+               <p>Organizer   : {orang[0]}</p>
                <Button text="Sisa 1 menu" url="http://hlmifzi.com" color="yellow" Click={this.props.ChangeMenu} />
                {/* <Button text="Join Us" url="http://hlmifzi.com" color="yellow" Click={this.ChangeMenuBack} /> */}
             </div>

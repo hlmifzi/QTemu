@@ -17,11 +17,15 @@ class Members extends Component {
 
    render() {
       let Judul = "Members"
+      let orang = []
+      this.props.orang.forEach(function(element) {
+         orang.push(element.name)
+     });
       return (
          <Fragment>
             <HeadSectionSeeAll Judul={Judul} />
             <div className="padding grid">
-               <ContentMembers content={this.state} />
+               <ContentMembers content={this.state} orang={orang}/>
             </div>
          </Fragment >
       )

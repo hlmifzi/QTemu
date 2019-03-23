@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-
+import axios from 'axios';
 //content
 import Navbar from './reUsabaleComp/Navbar/Navbar';
 import Footer from './reUsabaleComp/Footer';
@@ -8,11 +8,14 @@ import Footer from './reUsabaleComp/Footer';
 import './App.css';
 import Home from './component/home/Home';
 import Container from './reUsabaleComp/Container';
+import IsLoading from './reUsabaleComp/IsLoading';
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      isLoading: true,
+      orang: [],
       menu: [
         {
           text: 'Meet Up',
@@ -20,20 +23,18 @@ class App extends Component {
         },
         {
           text: 'Experience',
-          link: 'https://hlmifzi.com'
+          link: 'https://hlmifzi.com',
         },
         {
           text: 'Menu Tambahan',
-          link: 'https://hlmifzi.com'
+          link: 'https://hlmifzi.com',
         }
       ]
     }
 
-    this.ChangeMenu = this.ChangeMenu.bind(this);
-    this.ChangeMenuBack = this.ChangeMenuBack.bind(this);
   }
 
-  ChangeMenu() {
+  ChangeMenu = () => {
     this.setState({
       menu: [
         {
@@ -44,7 +45,7 @@ class App extends Component {
     })
   }
 
-  ChangeMenuBack() {
+  ChangeMenuBack = () => {
     this.setState({
       menu: [
         {
@@ -53,24 +54,47 @@ class App extends Component {
         },
         {
           text: 'Experience',
-          link: 'https://hlmifzi.com'
+          link: 'https://hlmifzi.com',
         },
         {
           text: 'Menu Tambahan',
-          link: 'https://hlmifzi.com'
+          link: 'https://hlmifzi.com',
         }
       ]
     })
   }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ isLoading: false })
+    }, 800);
+
+    axios
+      .get("https://swapi.co/api/people")
+      .then(response => this.setState({ orang: response.data.results }));
+    // .then(response => console.log(response.data.results));
+
+
+  }
+
   render() {
+    const Content = () => {
+      let { orang } = this.state
+
+      return (
+        <Fragment>
+          <Navbar ListMenu={this.state} ChangeMenuBack={this.ChangeMenuBack} />
+          <Container>
+            <Home ChangeMenu={this.ChangeMenu} orang={orang} />
+          </Container>
+          <Footer textFooter="Copyleft Hacktive 8" />
+        </Fragment >
+      )
+    }
+
     return (
-      <Fragment>
-        <Navbar ListMenu={this.state} ChangeMenuBack={this.ChangeMenuBack} />
-        <Container>
-          <Home ChangeMenu={this.ChangeMenu} />
-        </Container>
-        <Footer textFooter="Copyleft Hacktive 8" />
-      </Fragment >
+      this.state.isLoading ? <IsLoading Judul="Orang Sabar di sayang Allah" /> : <Content />
+
     );
   }
 }
