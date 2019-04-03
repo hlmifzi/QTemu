@@ -1,13 +1,14 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom'
 
 const Menu = (props) => {
    let { color, listMenu } = props
    let Menu = listMenu.menu.map((v, index) => (
-      <a target="_blank" rel="noopener noreferrer" className="item" key={index} href={v.link} style={color}>
+      <Link className="item" key={index} to={v.link} style={color}>
          {v.text}
-      </a>
+      </Link>
    ))
-   
+
 
    return (
       <Fragment>

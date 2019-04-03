@@ -1,11 +1,12 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 
 class Button extends Component {
    render() {
       let { text, color, url, Click } = this.props;
       return (
          <Fragment>
-            <div className={`ui ${color} button`} href={url} onClick={Click}>{text}</div>
+            <Link className={`ui ${color} button`} to={url} onClick={Click}>{text}</Link>
          </Fragment >
       )
    }

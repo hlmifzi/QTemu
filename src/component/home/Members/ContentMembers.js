@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class ContentMembers extends Component {
    render() {
-      let { content, content: { Nama }, orang } = this.props
+      let { content, orang } = this.props
       return (
          < Fragment >
             <div className="ui block header card" style={{ width: '100%' }}>

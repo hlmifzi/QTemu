@@ -14,7 +14,7 @@ class Navbar extends Component {
             <Menu color={NavbarCSS.MenuColor} listMenu={ListMenu} />
             <div className="right menu">
                <div className="item">
-                  <Button text="Normal Menu" url="http://hlmifzi.com" color="green" Click={this.props.ChangeMenuBack} />
+                  <Button text="Login" url="/Login" color="green" />
                </div>
             </div>
          </div>

@@ -7,7 +7,7 @@ class ContentHeader extends React.Component {
       super(props)
       this.ChangeMenuBack = this.ChangeMenuBack.bind(this);
    }
-
+   cs
    ChangeMenuBack() {
       console.log('woi')
       this.setState({
@@ -22,11 +22,7 @@ class ContentHeader extends React.Component {
 
 
    render() {
-      let { imgUrl, Judul, Location, Members,orang } = this.props
-     
-     
-      
-
+      let { imgUrl, Judul, Location, Members, orang } = this.props
       return (
          <Fragment>
             <div className="four wide column">
